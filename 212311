@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+
+int countOdd(int a[], int n)
+{
+    int count = 0;
+
+    for (int i = 0; i < n; i++)
+        if (a[i] % 2 != 0)
+            count++;
+
+    return count;
+}
+
+int main()
+{
+    int a[5];
+
+    printf("Enter 5 readings: ");
+    for (int i = 0; i < 5; i++)
+        scanf("%d", &a[i]);
+
+    printf("Odd readings = %d\n",
+           countOdd(a, 5));
+    return 0;
+}
