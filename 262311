@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+
+float robotAverage(int sensor[], int n)
+{
+    int sum = 0;
+
+    for (int i = 0; i < n; i++)
+        sum += sensor[i];
+
+    return (float)sum / n;
+}
+
+int main()
+{
+    int sensor[5];
+
+    printf("Enter 5 robot sensor readings: ");
+    for (int i = 0; i < 5; i++)
+        scanf("%d", &sensor[i]);
+
+    printf("Robot Sensor Average = %.2f\n",
+           robotAverage(sensor, 5));
+
+    return 0;
+}
