@@ -1,0 +1,24 @@
+
+#include <stdio.h>
+
+float average(float a[], int n)
+{
+    float sum = 0;
+    for (int i = 0; i < n; i++)
+        sum += a[i];
+
+    return sum / n;
+}
+
+int main()
+{
+    float temp[5];
+
+    printf("Enter 5 temperatures: ");
+    for (int i = 0; i < 5; i++)
+        scanf("%f", &temp[i]);
+
+    printf("Average Temperature = %.2f\n",
+           average(temp, 5));
+    return 0;
+}
