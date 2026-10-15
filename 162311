@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+
+int lowest(int a[], int n)
+{
+    int min = a[0];
+
+    for (int i = 1; i < n; i++)
+        if (a[i] < min)
+            min = a[i];
+
+    return min;
+}
+
+int main()
+{
+    int a[5];
+
+    printf("Enter 5 readings: ");
+    for (int i = 0; i < 5; i++)
+        scanf("%d", &a[i]);
+
+    printf("Lowest Reading = %d\n",
+           lowest(a, 5));
+    return 0;
+}
