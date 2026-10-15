@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+
+float average(int a[], int n)
+{
+    int sum = 0;
+    for (int i = 0; i < n; i++)
+        sum += a[i];
+
+    return (float)sum / n;
+}
+
+int main()
+{
+    int a[3];
+
+    printf("Enter 3 readings: ");
+    for (int i = 0; i < 3; i++)
+        scanf("%d", &a[i]);
+
+    printf("Average = %.2f\n", average(a, 3));
+    return 0;
+}
