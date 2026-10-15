@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+
+void doubleReadings(int a[], int n)
+{
+    for (int i = 0; i < n; i++)
+        printf("%d ", a[i] * 2);
+}
+
+int main()
+{
+    int a[5];
+
+    printf("Enter 5 readings: ");
+    for (int i = 0; i < 5; i++)
+        scanf("%d", &a[i]);
+
+    printf("Doubled Readings: ");
+    doubleReadings(a, 5);
+
+    return 0;
+}
