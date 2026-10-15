@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+
+float average(int a[], int n)
+{
+    int sum = 0;
+
+    for (int i = 0; i < n; i++)
+        sum += a[i];
+
+    return (float)sum / n;
+}
+
+int main()
+{
+    int p[5];
+
+    printf("Enter 5 pressure readings: ");
+    for (int i = 0; i < 5; i++)
+        scanf("%d", &p[i]);
+
+    printf("Average Pressure = %.2f\n",
+           average(p, 5));
+
+    return 0;
+}
