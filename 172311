@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+
+int total(int a[], int n)
+{
+    int sum = 0;
+    for (int i = 0; i < n; i++)
+        sum += a[i];
+    return sum;
+}
+
+int main()
+{
+    int a[5];
+
+    printf("Enter 5 readings: ");
+    for (int i = 0; i < 5; i++)
+        scanf("%d", &a[i]);
+
+    printf("Total = %d\n", total(a, 5));
+    return 0;
+}
