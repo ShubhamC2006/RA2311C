@@ -1,0 +1,29 @@
+
+#include <stdio.h>
+
+int countBelow(int a[], int n, int limit)
+{
+    int count = 0;
+
+    for (int i = 0; i < n; i++)
+        if (a[i] < limit)
+            count++;
+
+    return count;
+}
+
+int main()
+{
+    int a[5], limit;
+
+    printf("Enter 5 readings: ");
+    for (int i = 0; i < 5; i++)
+        scanf("%d", &a[i]);
+
+    printf("Enter limit: ");
+    scanf("%d", &limit);
+
+    printf("Readings below limit = %d\n",
+           countBelow(a, 5, limit));
+    return 0;
+}
